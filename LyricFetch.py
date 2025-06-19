@@ -7,7 +7,7 @@ genius = lyricsgenius.Genius("PUT YOUR GENIUS API TOKEN HERE")
 
 #Remove the non-lyric preamble like number of contributors
 def clean_lyrics(raw_lyrics):
-    match = re.search(r'\[.*?\]', raw_lyrics)
+    match = re.search(r'Lyrics', raw_lyrics)
     if match:
         return raw_lyrics[match.start():].strip()
     return raw_lyrics.strip()
